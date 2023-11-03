@@ -7,9 +7,12 @@ Djangoでテーブル表示のテスト
 DEBUG=True
 SECRET_KEY='django secret key here'
 ```
-
 ### venv
 ```
 python3 -m venv venv
 source venv/bin/activate
+```
+### Install packages
+```
+pip install -r requirements.txt
 ```
