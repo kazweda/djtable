@@ -1,7 +1,8 @@
-from django.shortcuts import render
+from django.views import generic
+from .models import Post
 
-def index(request):
-    message = {
-        'text':'Hello',
-    }
-    return render(request, 'blog/index.html', message)
+class IndexView(generic.TemplateView):
+    template_name = 'blog/index.html'
+    
+class PostListView(generic.ListView): # generic の ListViewクラスを継承
+    model = Post # 一覧表示させたいモデルを呼び出し
