@@ -16,12 +16,12 @@ class PostListViewTest(TestCase):
         )
             
   def test_list_use_correct_template(self):
-    response = self.client.get('/posts/')
+    response = self.client.get('/blog/posts/')
     self.assertEqual(response.status_code, 200)
     self.assertTemplateUsed(response, 'blog/post_list.html')
     
   def test_posts_count_correct(self):
-    response = self.client.get('/posts/')
+    response = self.client.get('/blog/posts/')
     self.assertEqual(response.status_code, 200)
     self.assertTemplateUsed(response, 'blog/post_list.html')
     self.assertEqual(len(response.context.get("post_list")), 13)
