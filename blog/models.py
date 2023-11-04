@@ -1,7 +1,9 @@
 from django.db import models
 from django.utils import timezone
+from django.contrib.auth.models import User
 
 class Post(models.Model):
+    author = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     title = models.CharField('タイトル', max_length=200)
     text = models.TextField('本文')
     date = models.DateTimeField('日付', default=timezone.now)
