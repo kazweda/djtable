@@ -3,7 +3,7 @@
 {% block content %}
 <h1>記事一覧</h1>
 
-<table class="table table-striped table table-bordered ">
+<table class="table table-striped table-bordered table-hover">
   <thead>
     <tr>
       <th>タイトル</th>
@@ -13,6 +13,7 @@
   <tbody>
     {% for post in post_list %}
     <tr>
+      <td>{{ post.author }}</td>
       <td>{{ post.title }}</td>
       <td>{{ post.date }}</td>
     </tr>
