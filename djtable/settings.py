@@ -25,6 +25,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog',
+    'myuser',
 ]
 
 MIDDLEWARE = [
@@ -88,6 +89,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTH_USER_MODEL = 'myuser.MyUser'
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/

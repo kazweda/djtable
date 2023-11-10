@@ -1,11 +1,18 @@
 from django.test import TestCase
-from django.contrib.auth.models import User
+# from django.contrib.auth.models import User
 from blog.models import Post
+# from django.conf import settings
+# User = settings.AUTH_USER_MODEL
+from myuser.models import MyUser as User
 
 class PostListViewTest(TestCase):
   @classmethod
   def setUpTestData(cls):
-    cls.user1 = User.objects.create_user(username='user1', password='qYi8Vp9S')
+    cls.user1 = User.objects.create_user(
+      username='user1',
+      password='qYi8Vp9S',
+      email='user1@example.com',
+      )
     cls.user1.save()
     
     for postid in range(13):
