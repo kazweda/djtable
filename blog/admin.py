@@ -11,6 +11,5 @@ from .models import Post # 追加
 #       if request.user.is_superuser:
 #           return qs
 #       return qs.filter(author=request.user)
-    
 
-# admin.site.register(Post, BlogAdmin) # 追加
+admin.site.register(Post)
