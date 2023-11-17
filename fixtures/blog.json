@@ -1,0 +1,32 @@
+[
+  {
+    "model": "blog.post",
+    "fields": {
+      "author": 3,
+      "title": "user1の投稿2",
+      "text": [
+        "user1の投稿2の本文です。user1の投稿2の本文です。user2の投稿2の本文です。\r\n",
+        "user1の投稿2の本文です。user1の投稿2の本文です。user1の投稿2の本文です。\r\n",
+        "user1の投稿2の本文です。user1の投稿2の本文です。user1の投稿2の本文です。\r\n",
+        "user1の投稿2の本文です。user1の投稿2の本文です。user1の投稿2の本文です。\r\n",
+        "user1の投稿2の本文です。user1の投稿2の本文です。user1の投稿2の本文です。"
+      ]
+    }
+  },
+  {
+    "model": "blog.post",
+    "fields": {
+      "author": 2,
+      "title": "teacher1の投稿2のタイトル",
+      "text": [
+        "teacher1の投稿2の本文です。teacher1の投稿2の本文です。teacher1の投稿2の本文です。\r\n",
+        "teacher1の投稿2の本文です。teacher1の投稿2の本文です。teacher1の投稿2の本文です。\r\n",
+        "teacher1の投稿2の本文です。teacher1の投稿2の本文です。teacher1の投稿2の本文です。\r\n",
+        "teacher1の投稿2の本文です。teacher1の投稿2の本文です。teacher1の投稿2の本文です。\r\n",
+        "eacher1の投稿2の本文です。teacher1の投稿2の本文です。teacher1の投稿2の本文です。\r\n",
+        "teacher1の投稿2の本文です。teacher1の投稿2の本文です。teacher1の投稿2の本文です。\r\n",
+        "teacher1の投稿2の本文です。teacher1の投稿2の本文です。teacher1の投稿2の本文です。"
+      ]
+    }
+  }
+]
