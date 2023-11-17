@@ -40,7 +40,7 @@ class MyUser(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(verbose_name='Email', max_length=50, unique=True)
     date_of_birth = models.DateField(verbose_name="誕生日", blank=True, null=True)
     introduction = models.TextField(verbose_name='自己紹介', max_length=300, blank=True, null=True)
-    date_joined = models.DateTimeField(verbose_name='登録日', auto_now_add=True)
+    date_joined = models.DateTimeField(verbose_name='登録日', auto_now_add=True, null=True)
     is_active = models.BooleanField(default=True)
 
     is_staff = models.BooleanField(default=False)
