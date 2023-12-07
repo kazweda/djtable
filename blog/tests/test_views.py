@@ -1,8 +1,6 @@
 from django.test import TestCase
-# from django.contrib.auth.models import User
+from django.urls import reverse
 from blog.models import Post
-# from django.conf import settings
-# User = settings.AUTH_USER_MODEL
 from myuser.models import MyUser as User
 
 class PostListViewTest(TestCase):
@@ -32,3 +30,26 @@ class PostListViewTest(TestCase):
     self.assertEqual(response.status_code, 200)
     self.assertTemplateUsed(response, 'blog/post_list.html')
     self.assertEqual(len(response.context.get("post_list")), 13)
+    
+class PostCreateTests(TestCase):
+    """PostCreateビューのテストクラス."""
+
+    def test_get(self):
+        """GET メソッドでアクセスしてステータスコード200を返されることを確認"""
+        response = self.client.get(reverse('blog:post_create'))
+        self.assertEqual(response.status_code, 200)
+
+    def test_post_with_data(self):
+        """適当なデータで　POST すると、成功してリダイレクトされることを確認"""
+        data = {
+            'title': 'test_title',
+            'text': 'test_text',
+        }
+        response = self.client.post(reverse('blog:post_create'), data=data)
+        self.assertEqual(response.status_code, 302)
+    
+    def test_post_null(self):
+        """空のデータで POST を行うとリダイレクトも無く 200 だけ返されることを確認"""
+        data = {}
+        response = self.client.post(reverse('blog:post_create'), data=data)
+        self.assertEqual(response.status_code, 200)
