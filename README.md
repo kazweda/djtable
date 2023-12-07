@@ -1,6 +1,9 @@
 # djtable
 Djangoでテーブル表示のテスト
 
+## 参考
+https://zenn.dev/tmasuyama1114/articles/django-tutorial-blogapp-1
+
 ## 環境設定
 ### .env
 ```
