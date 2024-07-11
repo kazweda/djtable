@@ -6,6 +6,10 @@ on:
   pull_request:
     branches: [ "main" ]
 
+env:
+  SECRET_KEY: test
+  DEBUG: "True"
+
 jobs:
   build:
 
@@ -31,7 +35,7 @@ jobs:
         sh setup-env.sh
     - name: Run Tests
       env:
-        DEBUG: ${{ secrets.DEBUG }}
-        SECRET_KEY: ${{ secrets.SECRET_KEY }}
+        DEBUG: ${{ env.DEBUG }}
+        SECRET_KEY: ${{ env.SECRET_KEY }}
       run: |
         python manage.py test
